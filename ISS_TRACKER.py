@@ -17,13 +17,13 @@ def get_iss_location():
             raw_data=requests.get(ISS_URL, timeout=30)
         except requests.ConnectionError as e:
             print(str(e))
-            time.wait(10)
+            time.sleep(10)
         except requests.Timeout as e:
             print(str(e))
-            time.wait(10)
+            time.sleep(10)
         except requests.RequestException as e:
             print(str(e))
-            time.wait(10)
+            time.sleep(10)
 
     json_data=raw_data.json()
     lat=json_data['iss_position']['latitude']
