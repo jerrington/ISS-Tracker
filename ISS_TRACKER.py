@@ -22,9 +22,7 @@ def tick():
     if time2 != time1:
         time1 = time2
         clock.config(text=time2)
-    # calls itself every 200 milliseconds
-    # to update the time display as needed
-    # could use >200 ms, but display gets jerky
+
     clock.after(1000, tick)
 
 def get_date():
